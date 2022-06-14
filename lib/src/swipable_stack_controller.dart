@@ -89,6 +89,20 @@ class SwipableStackController extends ChangeNotifier {
       duration: duration,
     );
   }
+  
+    void previous({
+    required SwipeDirection swipeDirection,
+    bool shouldCallCompletionCallback = true,
+    bool ignoreOnWillMoveNext = false,
+    Duration? duration,
+  }) {
+    _swipableStackStateKey.currentState?._next(
+      swipeDirection: swipeDirection,
+      shouldCallCompletionCallback: shouldCallCompletionCallback,
+      ignoreOnWillMoveNext: ignoreOnWillMoveNext,
+      duration: duration,
+    );
+  }
 
   /// Rewind the most recent action.
   ///
