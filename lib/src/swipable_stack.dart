@@ -584,13 +584,13 @@ class _SwipableStackState extends State<SwipableStack>
   void _rewind({
     required Duration duration,
   }) {
-    if (!canAnimationStart) {
-      return;
-    }
+//    if (!canAnimationStart) {
+//      return;
+//    }
     final previousSession = widget.controller._previousSession;
-    if (previousSession == null) {
-      return;
-    }
+//    if (previousSession == null) {
+//      return;
+//    }
     widget.controller._prepareRewind();
     _rewindAnimationController.duration = duration;
     final rewindAnimation = _rewindAnimationController.tweenCurvedAnimation(
